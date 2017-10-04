@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="controller.js"></script>
+    
+    <style>
+        body {
+            background-color: #474747;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            text-align: center;
+        }
+        button {
+            background-color: white;
+            border: none;
+            border-radius: 3px;
+            color: darkslategray;
+            font-family: 'Raleway', sans-serif;
+            padding: 5px 20px 5px 20px;
+        }
+        button:hover {
+            background-color: slategrey;
+            color: white;
+        }
+        .colorCube {
+            width: 95px;
+            height: 95px;
+            border: 3px solid #474747;
+            border-radius: 50%;
+            float: left;
+            margin: 5px;
+            margin-left: 0px;
+        }
+        .colorCube:hover {
+            border: 3px solid #e6ae49;
+            opacity: 0.7;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        .intro {
+           
+        }
+        p {
+            font-size: 0.6em;
+        }
+        .quizBox {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 80%;
+            height: 80%;
+            margin: auto;
+        }
+        .question {
+            width: 100%;
+        }
+        .surveyPic {
+            border: 3px solid #474747;
+        }
+        .surveyPic:hover {
+            border: 3px solid #e6ae49;
+            opacity: 0.7;
+        }
+        
+    </style>
+</head>
+    
+<body>
+
+    <div id="intro" class="quizBox">
+        <br><br><br><br><br><br>
+        <h1>Style Survey</h1>
+        <p>Select your favorites<br>to customize your shopping experience!</p>
+        <br>
+        <button id="begin">Begin</button>
+    </div>
+    
+    <div id="q1" class="quizBox" hidden>
+        <h2>What is your style?</h2>
+        <p><i>Select as many as you like!</i></p>
+        <br>
+        <img class="surveyPic" src="img/survey/01.jpg" alt="01">
+        <img class="surveyPic" src="img/survey/02.jpg" alt="02">
+        <img class="surveyPic" src="img/survey/03.jpg" alt="03">
+        <br>
+        <img class="surveyPic" src="img/survey/04.jpg" alt="04">
+        <img class="surveyPic" src="img/survey/05.jpg" alt="05">
+        <br>
+        <br>
+        <button id="toq2">Next</button>
+    </div>
+    
+    <div id="q2" class="quizBox" hidden>
+        <h2>Favorite Jewelry</h2>
+        <p><i>Select as many as you like!</i></p>
+        <br>
+        <img class="surveyPic" src="img/survey/06.jpg" alt="06">
+        <img class="surveyPic" src="img/survey/07.jpg" alt="07">
+        <img class="surveyPic" src="img/survey/08.jpg" alt="08">
+        <br>
+        <img class="surveyPic" src="img/survey/09.jpg" alt="09">
+        <img class="surveyPic" src="img/survey/10.jpg" alt="10">
+        <br>
+        <br>
+        <button id="toq3">Next</button>
+    </div>
+    
+    <div id="q3" class="quizBox" hidden>
+        <h2>Favorite Vacation Spot</h2>
+        <p><i>Select as many as you like!</i></p>
+        <br>
+        <img class="surveyPic" src="img/survey/11.jpg" alt="11">
+        <img class="surveyPic" src="img/survey/12.jpg" alt="12">
+        <img class="surveyPic" src="img/survey/13.jpg" alt="13">
+        <br>
+        <img class="surveyPic" src="img/survey/14.jpg" alt="14">
+        <img class="surveyPic" src="img/survey/15.jpg" alt="15">
+        <br>
+        <br>
+        <button id="toq4">Next</button>
+    </div>
+    
+    <div id="q4" class="quizBox" hidden>
+        <h2>What is your lifestyle?</h2>
+        <br>
+        <img class="surveyPic" src="img/survey/16.jpg" alt="16">
+        <img class="surveyPic" src="img/survey/17.jpg" alt="17">
+        <img class="surveyPic" src="img/survey/18.jpg" alt="18">
+        <br>
+        <img class="surveyPic" src="img/survey/19.jpg" alt="19">
+        <img class="surveyPic" src="img/survey/20.jpg" alt="20">
+        <br>
+        <br>
+        <button id="toq5">Next</button>
+    </div>
+    
+    <div id="q5" class="quizBox" hidden>
+        <h2>Create a color palette:</h2>
+        <div style="height: 100px; width: 650px; margin: 0 auto;">
+            <p style="float: left; width: 80px;">Neutrals</p>
+            <div class="colorCube" style="background-color: #3a3a3a;"></div>
+            <div class="colorCube" style="background-color: #E7DACA;"></div>
+            <div class="colorCube" style="background-color: #EDD0C7;"></div>
+            <div class="colorCube" style="background-color: white;"></div>
+            <div class="colorCube" style="background-color: #AB9783;"></div>
+        </div>
+        <br>
+        <div style="height: 100px; width: 650px; margin: 0 auto;">
+            <p style="float: left; width: 80px;">Complementary</p>
+            <div class="colorCube" style="background-color: #A2BDE5;"></div>
+            <div class="colorCube" style="background-color: #E2B27D;"></div>
+            <div class="colorCube" style="background-color: #693428;"></div>
+            <div class="colorCube" style="background-color: #28A1A3;"></div>
+            <div class="colorCube" style="background-color: #EF6E63;"></div>
+        </div>
+        
+        <br>
+        <div style="height: 100px; width: 650px; margin: 0 auto;">
+            <p style="float: left; width: 80px;">Accent</p>
+            <div class="colorCube" style="background-color:#001;
+                background-image: radial-gradient(white 15%, transparent 16%),
+                radial-gradient(white 15%, transparent 16%);
+                background-size:60px 60px;
+                background-position: 0 0, 30px 30px;"></div>
+            <div class="colorCube" style="background-color: hsl(2, 57%, 40%);
+                background-image: repeating-linear-gradient(transparent, transparent 20px, rgba(0,0,0,.4) 20px, rgba(0,0,0,.4) 23px, transparent 23px, transparent 33px, rgba(0,0,0,.4) 33px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 50px, rgba(0,0,0,.5) 70px, rgba(255,255,255,.2) 70px, rgba(255,255,255,.2) 70px, rgba(0,0,0,.5) 70px, rgba(0,0,0,.5) 80px, rgba(255,255,255,.2) 80px, rgba(255,255,255,.2) 80px, rgba(0,0,0,.5) 90px, rgba(0,0,0,.5) 100px, transparent 232px),
+                repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+                repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);"></div>
+            <div class="colorCube" style="background-color: gray;
+                background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);"></div>
+            <div class="colorCube" style="background-color: #6d695c;
+                background-image:
+                repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+                repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+                linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+                linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+                background-size: 70px 120px;"></div>
+            <div class="colorCube" style="background:
+                linear-gradient(-45deg, white 25%, transparent 25%, transparent 75%, black 75%, black) 0 0,
+                linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, white 75%, white) 1em 1em,
+                linear-gradient(45deg, black 17%, transparent 17%, transparent 25%, black 25%, black 36%, transparent 36%, transparent 64%, black 64%, black 75%, transparent 75%, transparent 83%, black 83%) 1em 1em;
+                background-color: white;
+                background-size: 2em 2em;"></div>
+        </div>
+        <br><br>
+        <button id="finished" href="index.html#recommendations">Done!</button>
+    </div>
+    
+    <div id="surveyExit" class="quizBox" hidden>
+        <br><br><br><br><br>
+        <h1>All Done!</h1>
+        <h3>Return to your Curator page to see<br>new recommendations!</h3>
+        <br>
+        <a href="index.html#recommendations"><button id="finished">Shop</button>
+        <img src="img/survey/complete2.png" alt="done" style="width: 80%; position: fixed; float: right; margin-top: -160px; margin-left: -20%; clear:both;">
+            </a>
+        
+    </div>
+    
+    <!--
+    <div>
+        <button id="begin">Done</button>
+        <button id="toq1">Done</button>
+        <button id="toq2">Done</button>
+        <button id="toq3">Done</button>
+        <button id="toq4">Done</button>
+        <button id="toq5">Done</button>
+        <button id="finished">Done</button>
+    </div>
+    -->
+    
+    
+    
+    
+    
+    
+    <script>
+        document.getElementById("begin").onclick = function start () {
+            $("#intro").hide();
+            $("#q1").show();
+        }
+        document.getElementById("toq2").onclick = function start () {
+            $("#q1").hide();
+            $("#q2").show();
+        }
+        document.getElementById("toq3").onclick = function start () {
+            $("#q2").hide();
+            $("#q3").show();
+        }
+        document.getElementById("toq4").onclick = function start () {
+            $("#q3").hide();
+            $("#q4").show();
+        }
+        document.getElementById("toq5").onclick = function start () {
+            $("#q4").hide();
+            $("#q5").show();
+        }
+        document.getElementById("finished").onclick = function start () {
+            $("#q5").hide();
+            $("#surveyExit").show();
+        }
+        
+        
+        $(".surveyPic").click(function () {
+            $(this).css('border', '3px solid #e6ae49');
+        });
+         $(".colorCube").click(function () {
+            $(this).css('border', '3px solid #e6ae49');
+        });
+        
+        
+    </script>
+    
+    
+</body>
+</html>
